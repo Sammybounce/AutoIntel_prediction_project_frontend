@@ -1,0 +1,12 @@
+body.dark .theme-logo.dark-element {
+	display: inline-block;
+}
+.theme-logo.dark-element {
+	display: none;
+}
+body.dark .theme-logo.light-element {
+	display: none;
+}
+.theme-logo.light-element {
+	display: inline-block;
+}
