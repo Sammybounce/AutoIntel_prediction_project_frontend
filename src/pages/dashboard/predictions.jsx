@@ -34,7 +34,7 @@ export const PredictionsPage = () => {
 						filterSearchCondition: "AND",
 						filters: [
 							{
-								filterOption: "eq",
+								filterOption: "cn",
 								field: "prediction.predictionModel",
 								value: model,
 								dataType: "string",
@@ -125,7 +125,7 @@ export const PredictionsPage = () => {
 									href="#"
 									onClick={(e) => {
 										e.preventDefault();
-										setModel("multilayer perceptron");
+										setModel("multilayer");
 									}}
 									className={`${
 										model === "multilayer-perceptron" ? "active" : ""
@@ -136,9 +136,9 @@ export const PredictionsPage = () => {
 									href="#"
 									onClick={(e) => {
 										e.preventDefault();
-										setModel("hybrid model");
+										setModel("hybrid");
 									}}
-									className={`${model === "hybrid" ? "active" : ""} nav-link`}>
+									className={`${model.includes("hybrid") ? "active" : ""} nav-link`}>
 									{`(RFR &MLP) Hybrid Model`}
 								</a>
 							</div>
@@ -168,7 +168,7 @@ export const PredictionsPage = () => {
 								</span>
 								<span
 									className={`badge badge-light-${
-										model === "multilayer perceptron" ? "primary" : "dark"
+										model.includes("multilayer") ? "primary" : "dark"
 									} mb-2 me-4`}
 									onClick={(e) => {
 										e.preventDefault();
@@ -178,7 +178,7 @@ export const PredictionsPage = () => {
 								</span>
 								<span
 									className={`mb-5 badge badge-light-${
-										model === "hybrid" ? "primary" : "dark"
+										model.includes("hybrid") ? "primary" : "dark"
 									} mb-2 me-4`}
 									onClick={(e) => {
 										e.preventDefault();

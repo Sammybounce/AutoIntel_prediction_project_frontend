@@ -112,9 +112,9 @@ export const SignUpPage = () => {
 								<img src="/assets/img/auth-cover.svg" alt="auth-img" />
 
 								<h2 className="mt-5 text-white font-weight-bolder px-2">
-									Predictive Analysis on Future Trends and Car Prices in the UK
-									Automotive Industry using Machine Learning, Deep Learning and
-									Hybrid Models
+								Comprehensive Analytics into Predicting Car Prices and 
+								Future Trends in the Automotive Industry using Machine Learning, 
+								Deep Learning and Hybrid Models.
 								</h2>
 								{/* <p className="text-white px-2">
 									It is easy to setup with great customer experience. Start your

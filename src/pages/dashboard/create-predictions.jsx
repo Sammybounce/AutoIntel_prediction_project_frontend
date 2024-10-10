@@ -93,15 +93,11 @@ export const CreatePredictionsPage = () => {
 			setLoading(true);
 
 			const formData = new FormData();
-			formData.append("model", model);
-			formData.append("startYear", startYear);
-			formData.append("endYear", endYear);
 			formData.append("file", file);
 
-			fetch(`${baseUrl}/predictions/create`, {
+			fetch(`${baseUrl}/predictions/create/${model}/${startYear}/${endYear}`, {
 				method: "POST",
 				headers: {
-					"Content-Type": "multipart/form-data",
 					"X-Auth-Token": user.token,
 				},
 				body: formData,

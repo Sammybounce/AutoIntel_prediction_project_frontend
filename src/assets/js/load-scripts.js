@@ -1,7 +1,6 @@
 export function loadScript(src, callback) {
 	if (document.getElementById(src)) {
-		if (callback) callback();
-		return;
+		document.getElementById(src).remove();
 	}
 
 	const script = document.createElement("script");
